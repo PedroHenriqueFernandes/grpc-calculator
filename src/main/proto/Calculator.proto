@@ -1,0 +1,17 @@
+syntax="proto3";
+option java_multiple_files=true;
+package org.example;
+
+message CalculatorRequest {
+  double numberOne = 1;
+  double numberTwo = 2;
+  string type = 3;
+}
+
+message CalculatorResponse {
+  double result = 1;
+}
+
+service CalculatorService {
+  rpc calculator(CalculatorRequest) returns (CalculatorResponse);
+}
